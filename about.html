@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://codehs.com/uploads/4a6829ac63616951ba2d5710aff6ceba" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: #00fff7;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+
+        .navbar {
+            background: rgba(0, 255, 255, 0.1); /* Transparent cyan background */
+            padding: 15px 0;
+            box-shadow: 0 0 10px #00ffff; /* Neon glow effect */
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline; /* Show links in line */
+            margin: 0 30px; /* Spacing between links */
+        }
+
+        .navbar a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #00fff7; /* Neon text color */
+    font-family: 'Press Start 2P', cursive; /* Use your existing font */
+    font-size: 1.5em; /* Size of the font */
+    position: relative; /* For the glow effect */
+    overflow: hidden; /* Hide the overflowing underline */
+}
+
+.navbar a::after {
+    content: ''; /* Create an underline effect */
+    display: block;
+    width: 100%;
+    height: 2px; /* Height of the underline */
+    background: #ff00ff; /* Pink glow for the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust position below the text */
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1); /* Reveal underline on hover */
+}
+
+        .navbar a:hover {
+            color: #ff00ff; /* Change color on hover */
+        }
+
+        h1 {
+            color: #ffcc00; /* Gold color for title */
+            text-shadow: 2px 2px 5px #000;
+            font-size: 3em;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #00fff7; /* Title color */
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        .member-name {
+            font-size: 1.5em;
+            color: #ffcc00;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="slots.html">Slots</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="proxy.html">Proxy</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>About This website</h1>
+        <div class="section">
+            <h2>Why this was made</h2>
+            <p>This was made for school, but anyone can use it if you want.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Meet the Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <p class="member-name">Me</p>
+                    <p>Lead Developer</p>
+                    <p>Passionate about game development and coding, Me brings creativity and innovation to every project.</p>
+                </div>
+                <div class="team-member">
+                    <p class="member-name">Myself</p>
+                    <p>Lead Designer</p>
+                    <p>Myself creates visually stunning interfaces that enhance the user's experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
