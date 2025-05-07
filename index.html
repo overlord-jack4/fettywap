@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://codehs.com/uploads/4a6829ac63616951ba2d5710aff6ceba" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>𝕴𝖙'𝖘 𝖆 𝖜𝖊𝖇𝖕𝖆𝖌𝖊</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      background: #0f0f0f;
+      color: #00fff7;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(45deg, rgba(0,255,255,0.1), rgba(255,0,255,0.1));
+      z-index: -1;
+      animation: bgmove 15s linear infinite;
+    }
+
+    @keyframes bgmove {
+      0% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(360deg) scale(1.2); }
+    }
+
+    h1.glow {
+      text-align: center;
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      margin-top: 50px;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid #0ff;
+      white-space: nowrap;
+      margin: 0 auto;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+      width: 25ch;
+      font-size: 1.5em;
+    }
+    
+    .navbar {
+  background: rgba(0, 255, 255, 0.1); /* Transparent cyan background */
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 0 10px #00ffff; /* Neon glow effect */
+}
+
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline; /* Show links in a line */
+  margin: 0 30px; /* Spacing between links */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #00fff7; /* Neon text color */
+  font-family: 'Press Start 2P', cursive; /* Use your existing font */
+  font-size: 1.5em; /* Size of the font */
+  position: relative; /* For the glow effect */
+}
+
+.navbar a:hover {
+  color: #ff00ff; /* Change color on hover */
+}
+
+.navbar a::after {
+  content: ''; /* Create an underline effect */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ff00ff; /* Pink glow */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust position */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1); /* Reveal underline on hover */
+}
+    
+    .game-frame-container {
+  position: relative; /* or absolute if you want it positioned based on the nearest positioned ancestor */
+  top: 100px; /* Move it down from the top */
+  left: 0px; /* adjust as necessary */
+  /* other existing styles */
+  
+  
+}
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 25ch }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #0ff }
+    }
+
+    a.button {
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      padding: 12px 30px;
+      border: none;
+      border-radius: 15px;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      display: inline-block;
+      margin-top: 20px;
+      box-shadow: 0 0 20px #00ffff;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    a.button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #ff00ff;
+    }
+
+    .section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    img {
+      border-radius: 15px;
+      width: 220px;
+      margin: 10px;
+      border: 3px solid #ff00ff;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    table {
+      margin: 0 auto;
+      color: white;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px #00ffff;
+      font-family: 'Press Start 2P', cursive;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 2px solid #00ffff;
+    }
+
+    .game-frame-container {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 1000px;
+      height: 600px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 30px #00ffff;
+      transition: all 0.3s ease;
+    }
+
+    .game-frame-container:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 0 40px #ff00ff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .glow-label {
+      color: #ff00ff;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.2em;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+    
+    .glow {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  font-family: 'Press Start 2P', cursive;
+}
+
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="slots.html">Slots</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="proxy.html">Proxy</a></li>
+  </ul>
+</nav>
+  <h1 class="glow">🌌 Welcome To my webpage 🌌</h1>
+  <div class="typewriter">Powered by: Me 😎</div>
+
+  <div class="section">
+    <p>
+      I am a middle school student who likes to play  video games and code games and listen to music.<br>
+      My favorite game: <strong>Skate 3</strong> | Favorite song: <strong>Santeria</strong> by Sublime.<br>
+      My favorite comic/vigilante is Moonknight because I like how he gets his powers.
+    </p>
+    <a class="button" href="https://en.wikipedia.org/wiki/Skate_3" target="_blank">Learn about Skate 3</a>
+  </div>
+
+  <div class="section">
+    <h2 class="glow">💥 Favorite Characters 💥</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Marc_Spector_39.jpg" alt="Moon Knight">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/BS.Ballout_x_Fetty_Wap_-_Slide_Still_%28cropped%29.jpg/250px-BS.Ballout_x_Fetty_Wap_-_Slide_Still_%28cropped%29.jpg" alt="Fetty Wap">
+  </div>
+
+  <div class="section">
+    <h2 class="glow">🎧 My Top Tracks🎧</h2>
+    <table>
+      <tr><th>Song</th><th>Artist</th><th>Genre</th><th>Notes</th></tr>
+      <tr><td>Santeria</td><td>Sublime</td><td>Ska Punk</td><td>My favorite song</td></tr>
+      <tr><td>The Distance</td><td>Cake</td><td>Alt Rock</td><td>I like the beat</td></tr>
+      <tr><td>Rollin</td><td>Limp Bizkit</td><td>Nu-Metal</td><td>I like nu-metal</td></tr>
+      <tr><td>Toxicity</td><td>System Of A Down</td><td>Progressive metal</td><td>I like soad</td></tr>
+      <tr><td>Trap Queen</td><td>Fetty Wap</td><td>Rap</td><td>1738</td></tr>
+    </table>
+  </div>
+  
+  <div class="section">
+    <h2 class="glow">🎶 My favorite bands🎶</h2>
+    <table>
+      <tr><th>Bands</th><th>Fav Song</th><th>Genre</th><th>Notes</th></tr>
+      <tr><td>System Of a Down</td><td>Toxicity</td><td>Progressive metal</td><td>My favorite song by Soad</td></tr>
+      <tr><td>Sublime</td><td>Santeria</td><td>Ska Punk</td><td>I like the meaning of the song.</td></tr>
+      <tr><td>Tool</td><td>Schism</td><td>Progressive metal</td><td>I like this song because of my dad</td></tr>
+      <tr><td>Korn</td><td>Freak On A Leash</td><td>Nu-metal</td><td>My sister told me about them.</td></tr>
+      <tr><td>Bestie Boys</td><td>Brass Monkey</td><td>Rap</td><td>My brother showed my them.</td></tr>
+    </table>
+  </div>
+  
+
+<br>
+<hr>
+<footer></footer>
+</body>
+</html>
