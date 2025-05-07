@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>about:blank</title>
+    <link rel="icon" href="https://codehs.com/uploads/4a6829ac63616951ba2d5710aff6ceba" type="image/x-icon">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      background: #0f0f0f;
+      color: #00fff7;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .navbar {
+  background: rgba(0, 255, 255, 0.1); /* Transparent cyan background */
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 0 10px #00ffff; /* Neon glow effect */
+}
+
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline; /* Show links in a line */
+  margin: 0 30px; /* Spacing between links */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #00fff7; /* Neon text color */
+  font-family: 'Press Start 2P', cursive; /* Use your existing font */
+  font-size: 1.5em; /* Size of the font */
+  position: relative; /* For the glow effect */
+}
+
+.navbar a:hover {
+  color: #ff00ff; /* Change color on hover */
+}
+
+.navbar a::after {
+  content: ''; /* Create an underline effect */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ff00ff; /* Pink glow */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust position */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1); /* Reveal underline on hover */
+}
+
+        .games-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 50px;
+            padding: 40px;
+            max-width: 1600px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        .game-card {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 225px;
+            height: 225px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 0 20px 5px #00ffff, 0 0 40px 10px rgba(169, 77, 255, 0.15), 0 0 60px 15px rgba(169, 77, 255, 0.1);
+        }
+
+            .game-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px 8px rgba(169, 77, 255, 0.4), 0 0 50px 14px rgba(169, 77, 255, 0.25), 0 0 80px 20px rgba(169, 77, 255, 0.15);
+            }
+
+            .game-card img {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 10px;
+                pointer-events: none;
+            }
+
+            .game-card span {
+                font-size: 0px;
+                font-weight: bold;
+            }
+
+        .games-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-evenly;
+            padding: 40px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin: 20px auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .search-bar input {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                outline: none;
+                  font-family: 'Press Start 2P', 
+            }
+
+                .search-bar input::placeholder {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: 'Press Start 2P', 
+                }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-me {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="slots.html">Slots</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="proxy.html">Proxy</a></li>
+  </ul>
+</nav>
+
+    <div class="search-bar">
+        <input type="text" id="gameSearch" placeholder="Search for a game..." onkeyup="searchGames()">
+    </div>
+
+    <div class="games-section">
+
+
+
+        <a href="slopeframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/15c33903235ca38335e5d1d706c40ce9');">
+            <span>slope</span>
+        </a>
+
+        <a href="bstarsframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/1ffb7369efaaab54d5f74292d56e0079');">
+            <span>basketball stars</span>
+        </a>
+
+        <a href="papasframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/083be6be8d38a175cadd1ca49afdd15f');">
+            <span>papas pizzaria</span>
+        </a>
+
+        <a href="gtsframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/aab6ab146af91fcffc7c0ee21b936422');">
+            <span>gatewway shootout</span>
+        </a>
+
+        <a href="retrobowlframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/574c28f0c17c985d52c08fe200aa188d');">
+            <span>retro bowl</span>
+        </a>
+
+        <a href="tsframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/7289f2ac32e014de3cb0cd65910c9fcb');">
+            <span>time shooter</span>
+        </a>
+
+        <a href="ccframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/dfe2a120801a24ba9ab6c361ce20f1cc');">
+            <span>cookie clicker</span>
+        </a>
+
+        <a href="mcframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/0d936a22e2cbb38e5a289400105d3bb6');">
+            <span>minecraft</span>
+        </a>
+
+        <a href="vex6frame.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/ae31dba9a859cc2f30cca6e3330af51a');">
+            <span>vex 6</span>
+        </a>
+
+        <a href="mx3mframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/bf67c01bd14694abeccded5321fa93b1');">
+            <span>motox3m</span>
+        </a>
+
+        <a href="1o1sframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/4c227dc33375c6f8a91e48c0edeeb96f');">
+            <span>1 on 1 soccer</span>
+        </a>
+
+        <a href="tetrisframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/f8d7f347ea2b8b556b79c8446c422202');">
+            <span>tetris</span>
+        </a>
+
+        <a href="tiqframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/384842e7dec1dc40229d8981f49527f5');">
+            <span>the impossible quiz</span>
+        </a>
+
+        <a href="sbfframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/d9d148b64107457e639926cf99e7e2cc');">
+            <span>sans boss fight</span>
+        </a>
+
+        <a href="whgframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/6d8a7469f73a4c40db3a08acf86d9499');">
+            <span>worlds hardest game</span>
+        </a>
+
+
+        <a href="2048frame.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/1dfc5b6050a62f7b319b467d35f2876a');">
+            <span>2048</span>
+        </a>
+
+        <a href="rtsframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/55d7ae4d724ec9ca8e56147e3c5f60f8');">
+            <span>rooftop snipers</span>
+        </a>
+
+        <a href="btd4frame.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/bdb6ffb3853fd5c9e975252b7cfb3caf');">
+            <span>btd4</span>
+        </a>
+       
+        <a href="ibframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/71412044ad9b313156cdcef102408950');">
+            <span>idle breakout</span>
+        </a>
+       
+        <a href="snowioframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/de2122057d8fdd1424f1444b9f998646');">
+            <span>snowball.io</span>
+        </a>
+       
+        <a href="drunframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/3174f6df311ee0fe036d341ced136525');">
+            <span>death run 3d</span>
+        </a>
+       
+        <a href="tttframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/2a8807fd5b5ded5fc62fc77571935610');">
+            <span>tic tac toe</span>
+        </a>
+       
+        <a href="srframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/eaba16bedf693e5f957f795bf75f304c');">
+            <span>snow rider</span>
+        </a>
+        <a href="tfframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/4dbc088e1afb5a76ff140a310bb4b203');">
+            <span>tiny fish</span>
+        </a>
+        <a href="tzaframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/a43ac7cd320b6c60a05efa523a1141cb');">
+            <span>tza.red</span>
+        </a>
+        <a href="unoframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/75809df45f7b6440c734d027e2aa587b');">
+            <span>uno</span>
+        </a>
+        <a href="TRFrame.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/f74e74c180c082417f272945ce320091');">
+            <span>tunnel rush</span>
+        </a>
+        <a href="SWframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/ed3712c6b6737f12f126620886987623');">
+            <span>subway surfers</span>
+        </a>
+        <a href="hoboframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/25397e33025f55687a686d41acc30166');">
+            <span>hobo 1</span>
+        </a>
+        <a href="flappyframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/65f32b9e335e2964a741a732ac055f65');">
+            <span>flappy bird</span>
+        </a>
+        <a href="baldiframe.html" class="game-card"
+           style="background-image: url('https://codehs.com/uploads/65f32b9e335e2964a741a732ac055f65');">
+            <span>baldis basics</span>
+        </a>
+
+    </div>
+
+
+
+
+
+    <script>
+        function searchGames() {
+            let input = document.getElementById('gameSearch').value.toLowerCase();
+            let games = document.querySelectorAll('.game-card');
+
+            games.forEach(function (game) {
+                let title = game.querySelector('span').textContent.toLowerCase();
+                if (title.indexOf(input) > -1) {
+                    game.style.display = '';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
+       
+    </script>
+
+</body>
+</html>
